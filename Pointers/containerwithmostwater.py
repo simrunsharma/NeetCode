@@ -3,18 +3,18 @@ def maxArea(heights):
         for i,a in enumerate(heights):
             l = i
             r = i + 1
-            print("this is FIRST left",l)
-            print("this is FIRST right",r)
+            #print("this is FIRST left",l)
+            #print("this is FIRST right",r)
             while r < len(heights):
                 width = r - l
-                print("this is width",width)
+                #print("this is width",width)
                 height = min(heights[l],heights[r])
                 area = width * height
                 max_areas.append(area)
-                print("this is area",area)
+                #print("this is area",area)
                 r +=1
-            print("this is left",l)
-            print("this is right",r)
+            #print("this is left",l)
+            #print("this is right",r)
         return max(max_areas)
 
 if __name__ == '__main__':
@@ -28,3 +28,7 @@ if __name__ == '__main__':
     print("This is the output2", Output2)
     #Output: 4
 
+'''
+I put the image here in the folder: but essentially we want take the width every index and then the minumum of the two numbers for heights.
+Then find the max area.
+'''
